@@ -8,6 +8,18 @@ body {
     background-color: #121212;
     color: #e0e0e0;
     transition: background-color 0.5s, color 0.5s;
+    cursor: none; /* Hide the default cursor */
+}
+
+.crosshair {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border: 2px solid #ff69b4;
+    border-radius: 50%;
+    pointer-events: none; /* Make sure the crosshair doesn't interfere with other elements */
+    transition: transform 0.1s;
 }
 
 .container {
