@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bio Service - Login/Register</title>
+    <title>Bio Service - Login/Register (Invite Only)</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -19,6 +19,8 @@
             padding: 2rem;
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            max-width: 400px;
+            width: 100%;
         }
         form {
             display: flex;
@@ -46,6 +48,11 @@
             margin-top: 1rem;
             text-align: center;
         }
+        .invite-info {
+            font-size: 0.9em;
+            color: #666;
+            margin-top: 0.5rem;
+        }
     </style>
 </head>
 <body>
@@ -63,14 +70,18 @@
         </div>
         
         <div id="register-form" style="display: none;">
-            <h2>Register</h2>
+            <h2>Register (Invite Only)</h2>
             <form>
                 <input type="text" placeholder="Full Name" required>
                 <input type="email" placeholder="Email" required>
                 <input type="password" placeholder="Password" required>
                 <input type="password" placeholder="Confirm Password" required>
+                <input type="text" placeholder="Invite Code" required>
                 <button type="submit">Register</button>
             </form>
+            <div class="invite-info">
+                An invite code is required to register. If you don't have one, please contact an administrator.
+            </div>
             <div class="toggle">
                 Already have an account? <a href="#" onclick="toggleForms()">Login</a>
             </div>
