@@ -23,7 +23,7 @@
         
         <div id="register-form" style="display: none;">
             <h2>Register</h2>
-            <form>
+            <form id="registerForm">
                 <input type="text" placeholder="Full Name" required>
                 <input type="email" placeholder="Email" required>
                 <input type="password" placeholder="Password" required>
@@ -57,6 +57,13 @@
             const crosshair = document.querySelector('.crosshair');
             crosshair.style.left = e.pageX + 'px';
             crosshair.style.top = e.pageY + 'px';
+        });
+
+        document.getElementById('registerForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Add your form validation and submission logic here
+            // For now, we'll just redirect to the welcome page
+            window.location.href = 'welcome.html';
         });
     </script>
 </body>
