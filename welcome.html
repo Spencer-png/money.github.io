@@ -12,5 +12,13 @@
         <h1>Welcome to Astolfo Bio!</h1>
         <p>Thank you for registering. You can now log in and start using our services.</p>
     </div>
+
+    <script>
+        document.addEventListener('mousemove', function(e) {
+            const crosshair = document.querySelector('.crosshair');
+            crosshair.style.left = e.pageX + 'px';
+            crosshair.style.top = e.pageY + 'px';
+        });
+    </script>
 </body>
 </html>
