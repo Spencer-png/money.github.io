@@ -61,15 +61,43 @@
 
         document.getElementById('registerForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            // Add your form validation and submission logic here
-            // For now, we'll just redirect to the welcome page
+            const name = document.getElementById('registerName').value;
+            const email = document.getElementById('registerEmail').value;
+            const password = document.getElementById('registerPassword').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            const inviteCode = document.getElementById('inviteCode').value;
+            const errorElement = document.getElementById('registerError');
+
+            if (password !== confirmPassword) {
+                errorElement.textContent = "Passwords do not match";
+                return;
+            }
+
+            if (inviteCode !== "ASTOLFO2024") {
+                errorElement.textContent = "Invalid invite code";
+                return;
+            }
+
+            // If all validations pass, you would typically send this data to your server
+            console.log("Registration successful", { name, email, password, inviteCode });
+            alert("Registration successful! Welcome to Astolfo Bio!");
             window.location.href = 'welcome.html';
         });
 
         document.getElementById('loginForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            // Add your login validation and submission logic here
-            alert('Login form submitted');
+            const email = document.getElementById('loginEmail').value;
+            const password = document.getElementById('loginPassword').value;
+            const errorElement = document.getElementById('loginError');
+
+            // This is a mock login. In a real application, you would verify these credentials with your server.
+            if (email === "user@example.com" && password === "password123") {
+                console.log("Login successful");
+                alert("Login successful! Welcome back to Astolfo Bio!");
+                window.location.href = 'welcome.html';
+            } else {
+                errorElement.textContent = "Invalid email or password";
+            }
         });
     </script>
 </body>
