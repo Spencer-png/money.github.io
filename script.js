@@ -7,15 +7,11 @@ function toggleForms() {
 
 function handleLogin(event) {
     event.preventDefault();
-    // Here you would typically send a request to your server to authenticate the user
-    // For this example, we'll just simulate a successful login
     window.location.href = 'welcome.html';
 }
 
 function handleRegister(event) {
     event.preventDefault();
-    // Here you would typically send a request to your server to register the user
-    // For this example, we'll just simulate a successful registration
     window.location.href = 'welcome.html';
 }
 
