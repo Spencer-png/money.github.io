@@ -89,10 +89,14 @@ document.getElementById('toggleBeta').addEventListener('click', function() {
 });
 
 // Update Beta Status
-function updateBetaStatus() {
-    const betaStatus = document.getElementById('betaStatus');
-    betaStatus.textContent = betaMode ? 'Beta mode is ON' : 'Beta mode is OFF';
-}
+document.getElementById('banUser').addEventListener('click', function() {
+    const username = document.getElementById('banUsername').value;
+    if (username && !bans.includes(username)) {
+        bans.push(username);
+        updateBanList();
+        document.getElementById('banUsername').value = '';
+    }
+})
 
 // Initial updates
 updateInviteList();
