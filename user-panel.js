@@ -1,8 +1,8 @@
 // Mock data - replace with actual API calls in production
 let userInvites = ['USERINV1', 'USERINV2'];
 let subscriptions = [
-    { name: 'Basic Plan', status: 'Active', expiryDate: '2024-12-31' },
-    { name: 'Premium Plan', status: 'Expired', expiryDate: '2024-09-15' }
+    { name: 'Premium Plan', status: 'Active', expiryDate: '2024-12-31' },
+    { name: 'Beta Plan', status: 'Expired', expiryDate: '2024-09-15' }
 ];
 
 // Generate Invite
