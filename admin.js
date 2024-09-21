@@ -4,7 +4,6 @@ let users = ['user1', 'user2', 'user3'];
 let bans = ['baduser1', 'baduser2'];
 let beta = ['Beta user1', 'Beta user2'];
 let adminInvites = ['ADMIN1', 'ADMIN2'];
-let betaMode = false;
 
 // Generate Invite
 document.getElementById('generateInvite').addEventListener('click', function() {
@@ -97,10 +96,10 @@ document.getElementById('Betalist').addEventListener('click', function() {
 function updateBetaList() {
     const betaList = document.getElementById('BetaList');
     betaList.innerHTML = '';
-    bans.forEach(beta => {
-        const lil = document.createElement('lil');
-        lil.textContent = beta;
-        betaList.appendChild(lil);
+    beta.forEach(beta => {
+        const li = document.createElement('li');
+        li.textContent = beta;
+        betaList.appendChild(li);
     });
 }
 
