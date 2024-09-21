@@ -3,22 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome</title>
+    <title>Welcome to Astolfo Bio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="crosshair"></div>
+
     <div class="welcome-container">
         <h1>Welcome to Astolfo Bio!</h1>
-        <p>Thank you for registering. You can now log in and start using our services.</p>
+        <p>Thank you for registering. You can now start using our services.</p>
+        <button onclick="goToForum()">Go to Forum</button>
     </div>
 
-    <script>
-        document.addEventListener('mousemove', function(e) {
-            const crosshair = document.querySelector('.crosshair');
-            crosshair.style.left = e.pageX + 'px';
-            crosshair.style.top = e.pageY + 'px';
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
