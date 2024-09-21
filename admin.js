@@ -89,12 +89,12 @@ document.getElementById('toggleBeta').addEventListener('click', function() {
 });
 
 // Update Beta Status
-document.getElementById('banUser').addEventListener('click', function() {
-    const username = document.getElementById('banUsername').value;
+document.getElementById('Betalist').addEventListener('click', function() {
+    const username = document.getElementById('BetaUsername').value;
     if (username && !bans.includes(username)) {
         bans.push(username);
-        updateBanList();
-        document.getElementById('banUsername').value = '';
+        updateBetaStatus();
+        document.getElementById('BetaUsername').value = '';
     }
 })
 
