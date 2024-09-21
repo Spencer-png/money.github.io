@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beware User Panel</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="crosshair"></div>
+
+    <div class="user-panel-container">
+        <h1>Beware User Panel</h1>
+
+        <div class="user-section">
+            <h2>Manage Invites</h2>
+            <button id="generateInvite">Generate New Invite</button>
+            <ul id="inviteList"></ul>
+        </div>
+
+        <div class="user-section">
+            <h2>Manage Active Subscriptions</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Subscription</th>
+                        <th>Status</th>
+                        <th>Expiry Date</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="subscriptionList"></tbody>
+            </table>
+        </div>
+
+        <div class="user-section">
+            <h2>Downloads</h2>
+            <ul id="downloadList">
+                <li><a href="#" class="download-link" data-file="beware_client.zip">Beware Client</a></li>
+                <li><a href="#" class="download-link" data-file="beware_manual.pdf">User Manual</a></li>
+                <li><a href="#" class="download-link" data-file="beware_tools.zip">Additional Tools</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="user-panel.js"></script>
+</body>
+</html>
