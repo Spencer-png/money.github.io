@@ -87,7 +87,7 @@ document.getElementById('Betalist').addEventListener('click', function() {
     const username = document.getElementById('BetaUsername').value;
     if (username && !beta.includes(username)) {
         beta.push(username);
-        updateBetaStatus();
+        updateBetaList();
         document.getElementById('BetaUsername').value = '';
     }
 })
