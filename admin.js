@@ -2,7 +2,7 @@
 let invites = ['INVITE1', 'INVITE2', 'INVITE3'];
 let users = ['user1', 'user2', 'user3'];
 let bans = ['baduser1', 'baduser2'];
-let beta = ['Beta user1', 'Beta user2'];
+let betaUsers = ['Beta user1', 'Beta user2'];
 let adminInvites = ['ADMIN1', 'ADMIN2'];
 
 // Generate Invite
@@ -82,23 +82,23 @@ function updateAdminInviteList() {
     });
 }
 
-// Update Beta Status
-document.getElementById('BetaUser').addEventListener('click', function() {
-    const username = document.getElementById('BetaUsername').value;
-    if (username && !beta.includes(username)) {
-        beta.push(username);
+// Add Beta User
+document.getElementById('addBetaUser').addEventListener('click', function() {
+    const username = document.getElementById('betaUsername').value;
+    if (username && !betaUsers.includes(username)) {
+        betaUsers.push(username);
         updateBetaList();
-        document.getElementById('BetaUsername').value = '';
+        document.getElementById('betaUsername').value = '';
     }
-})
+});
 
 // Update Beta List
 function updateBetaList() {
-    const betaList = document.getElementById('BetaList');
+    const betaList = document.getElementById('betaList');
     betaList.innerHTML = '';
-    beta.forEach(beta => {
+    betaUsers.forEach(user => {
         const li = document.createElement('li');
-        li.textContent = beta;
+        li.textContent = user;
         betaList.appendChild(li);
     });
 }
@@ -113,6 +113,6 @@ updateBetaList();
 // Crosshair functionality
 document.addEventListener('mousemove', (e) => {
     const crosshair = document.querySelector('.crosshair');
-    crosshair.style.left = `${e.clientX - 10}px`;
-    crosshair.style.top = `${e.clientY - 10}px`;
+    crosshair.style.left = `${e.clientX}px`;
+    crosshair.style.top = `${e.clientY}px`;
 });
