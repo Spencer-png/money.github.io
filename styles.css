@@ -140,6 +140,18 @@ a:hover {
 
 /*admin panel */
 
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.button-group button {
+    flex: 1;
+    max-width: 150px;
+}
+
 .admin-container {
     background-color: #1e1e1e;
     padding: 2rem;
