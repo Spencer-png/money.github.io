@@ -8,49 +8,34 @@ body {
     background-color: #121212;
     color: #e0e0e0;
     transition: background-color 0.5s, color 0.5s;
-    cursor: none; /* Hide the default cursor */
+    cursor: none;
 }
 
 .crosshair {
-    position: absolute;
+    position: fixed;
     width: 20px;
     height: 20px;
     background-color: transparent;
     border: 2px solid #ff69b4;
     border-radius: 50%;
-    pointer-events: none; /* Make sure the crosshair doesn't interfere with other elements */
+    pointer-events: none;
     transition: transform 0.1s;
     animation: pulse 1s infinite, colorChange 5s infinite;
+    z-index: 9999;
 }
 
 @keyframes pulse {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.2);
-    }
-    100% {
-        transform: scale(1);
-    }
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
 }
 
 @keyframes colorChange {
-    0% {
-        border-color: #ff69b4;
-    }
-    25% {
-        border-color: #ff1493;
-    }
-    50% {
-        border-color: #ff69b4;
-    }
-    75% {
-        border-color: #ff1493;
-    }
-    100% {
-        border-color: #ff69b4;
-    }
+    0% { border-color: #ff69b4; }
+    25% { border-color: #ff1493; }
+    50% { border-color: #ff69b4; }
+    75% { border-color: #ff1493; }
+    100% { border-color: #ff69b4; }
 }
 
 .container {
@@ -65,12 +50,8 @@ body {
 }
 
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 form {
@@ -129,15 +110,29 @@ a:hover {
     color: #ff1493;
 }
 
-@keyframes slideIn {
-    from {
-        transform: translateY(100%);
-    }
-    to {
-        transform: translateY(0);
-    }
+.welcome-container, .forum-container {
+    animation: slideIn 1s ease-in-out;
+    text-align: center;
 }
 
-.welcome-container {
-    animation: slideIn 1s ease-in-out;
+@keyframes slideIn {
+    from { transform: translateY(100%); }
+    to { transform: translateY(0); }
+}
+
+.forum-post {
+    background-color: #2a2a2a;
+    border-radius: 5px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.forum-post h3 {
+    margin-top: 0;
+}
+
+.post-meta {
+    font-size: 0.8em;
+    color: #888;
+    margin-bottom: 0.5rem;
 }
