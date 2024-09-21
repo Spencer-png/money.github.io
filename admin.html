@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beware Admin Panel</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="crosshair"></div>
+    <div class="admin-container">
+        <h1>Beware Admin Panel</h1>
+        <div class="admin-section">
+            <h2>Manage Invites</h2>
+            <button id="generateInvite">Generate New Invite</button>
+            <ul id="inviteList"></ul>
+        </div>
+        <div class="admin-section">
+            <h2>Manage Users</h2>
+            <table id="userTable">
+                <thead>
+                    <tr>
+                        <th>Username</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="userList"></tbody>
+            </table>
+        </div>
+        <div class="admin-section">
+            <h2>Manage Bans</h2>
+            <input type="text" id="banUsername" placeholder="Username to ban">
+            <button id="banUser">Ban User</button>
+            <ul id="banList"></ul>
+        </div>
+        <div class="admin-section">
+            <h2>Manage Admin Invites</h2>
+            <button id="generateAdminInvite">Generate Admin Invite</button>
+            <ul id="adminInviteList"></ul>
+        </div>
+        <div class="admin-section">
+            <h2>Manage Beta</h2>
+            <button id="toggleBeta">Toggle Beta Mode</button>
+            <p id="betaStatus"></p>
+        </div>
+    </div>
+    <script src="admin.js"></script>
+</body>
+</html>
