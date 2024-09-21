@@ -2,6 +2,7 @@
 let invites = ['INVITE1', 'INVITE2', 'INVITE3'];
 let users = ['user1', 'user2', 'user3'];
 let bans = ['baduser1', 'baduser2'];
+let beta = ['Beta user1', 'Beta user2'];
 let adminInvites = ['ADMIN1', 'ADMIN2'];
 let betaMode = false;
 
@@ -85,8 +86,8 @@ function updateAdminInviteList() {
 // Update Beta Status
 document.getElementById('Betalist').addEventListener('click', function() {
     const username = document.getElementById('BetaUsername').value;
-    if (username && !bans.includes(username)) {
-        bans.push(username);
+    if (username && !beta.includes(username)) {
+        beta.push(username);
         updateBetaStatus();
         document.getElementById('BetaUsername').value = '';
     }
