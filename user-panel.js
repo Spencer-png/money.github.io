@@ -54,7 +54,7 @@ document.querySelectorAll('.download-link').forEach(link => {
     link.addEventListener('click', function(e) {
         e.preventDefault();
         const fileName = this.getAttribute('data-file');
-        alert(`Downloading ${fileName}... In a real application, this would initiate the file download.`);
+        alert(`Downloading ${fileName}... test`);
     });
 });
 
