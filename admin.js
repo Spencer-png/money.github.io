@@ -82,12 +82,6 @@ function updateAdminInviteList() {
     });
 }
 
-// Toggle Beta Mode
-document.getElementById('toggleBeta').addEventListener('click', function() {
-    betaMode = !betaMode;
-    updateBetaStatus();
-});
-
 // Update Beta Status
 document.getElementById('Betalist').addEventListener('click', function() {
     const username = document.getElementById('BetaUsername').value;
