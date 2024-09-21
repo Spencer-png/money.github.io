@@ -23,6 +23,10 @@ function goToUserPanel() {
     window.location.href = 'user-panel.html';
 }
 
+function goToAdminPanel() {
+    window.location.href = 'admin.html';
+}
+
 document.addEventListener('mousemove', (e) => {
     const crosshair = document.querySelector('.crosshair');
     crosshair.style.left = `${e.clientX}px`;
