@@ -8,16 +8,19 @@
 </head>
 <body>
     <div class="crosshair"></div>
+
     <div class="admin-container">
         <h1>Beware Admin Panel</h1>
+
         <div class="admin-section">
             <h2>Manage Invites</h2>
             <button id="generateInvite">Generate New Invite</button>
             <ul id="inviteList"></ul>
         </div>
+
         <div class="admin-section">
             <h2>Manage Users</h2>
-            <table id="userTable">
+            <table>
                 <thead>
                     <tr>
                         <th>Username</th>
@@ -27,24 +30,28 @@
                 <tbody id="userList"></tbody>
             </table>
         </div>
+
         <div class="admin-section">
             <h2>Manage Bans</h2>
-            <input type="text" id="banUsername" placeholder="Username to ban">
+            <input type="text" id="banUsername" placeholder="Enter username to ban">
             <button id="banUser">Ban User</button>
             <ul id="banList"></ul>
         </div>
+
         <div class="admin-section">
             <h2>Manage Admin Invites</h2>
             <button id="generateAdminInvite">Generate Admin Invite</button>
             <ul id="adminInviteList"></ul>
         </div>
+
         <div class="admin-section">
-            <h2>Beta</h2>
-            <input type="text" id="BetaUsername" placeholder="Username to give BETA">
-            <button id="Betalist">Give Beta</button>
-            <ul id="Betalist"></ul>
+            <h2>Manage Beta Users</h2>
+            <input type="text" id="betaUsername" placeholder="Enter username for beta access">
+            <button id="addBetaUser">Add Beta User</button>
+            <ul id="betaList"></ul>
         </div>
     </div>
+
     <script src="admin.js"></script>
 </body>
 </html>
