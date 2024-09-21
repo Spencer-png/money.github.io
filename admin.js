@@ -108,7 +108,6 @@ updateInviteList();
 updateUserList();
 updateBanList();
 updateAdminInviteList();
-updateBetaStatus();
 updateBetaList();
 
 // Crosshair functionality
