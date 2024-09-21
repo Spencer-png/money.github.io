@@ -83,7 +83,7 @@ function updateAdminInviteList() {
 }
 
 // Update Beta Status
-document.getElementById('Betalist').addEventListener('click', function() {
+document.getElementById('BetaUser').addEventListener('click', function() {
     const username = document.getElementById('BetaUsername').value;
     if (username && !beta.includes(username)) {
         beta.push(username);
