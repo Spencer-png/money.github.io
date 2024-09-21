@@ -93,12 +93,24 @@ document.getElementById('Betalist').addEventListener('click', function() {
     }
 })
 
+// Update Beta List
+function updateBetaList() {
+    const betaList = document.getElementById('BetaList');
+    betaList.innerHTML = '';
+    bans.forEach(beta => {
+        const lil = document.createElement('lil');
+        lil.textContent = beta;
+        betaList.appendChild(lil);
+    });
+}
+
 // Initial updates
 updateInviteList();
 updateUserList();
 updateBanList();
 updateAdminInviteList();
 updateBetaStatus();
+updateBetaList();
 
 // Crosshair functionality
 document.addEventListener('mousemove', (e) => {
