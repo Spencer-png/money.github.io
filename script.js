@@ -19,8 +19,12 @@ function goToForum() {
     window.location.href = 'forum.html';
 }
 
+function goToUserPanel() {
+    window.location.href = 'user-panel.html';
+}
+
 document.addEventListener('mousemove', (e) => {
     const crosshair = document.querySelector('.crosshair');
-    crosshair.style.left = `${e.clientX - 10}px`;
-    crosshair.style.top = `${e.clientY - 10}px`;
+    crosshair.style.left = `${e.clientX}px`;
+    crosshair.style.top = `${e.clientY}px`;
 });
