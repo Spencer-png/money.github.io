@@ -3,16 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Astolfo Bio</title>
+    <title>Astolfo Bio - Login/Register</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="crosshair"></div>
+
     <div class="container">
         <div id="login-form">
             <h2>Login</h2>
-            <form id="loginForm">
-                <input type="email" placeholder="Email" required>
+            <form onsubmit="handleLogin(event)">
+                <input type="text" placeholder="Username" required>
                 <input type="password" placeholder="Password" required>
                 <button type="submit">Login</button>
             </form>
@@ -20,14 +21,12 @@
                 Don't have an account? <a href="#" onclick="toggleForms()">Register</a>
             </div>
         </div>
-        
+
         <div id="register-form" style="display: none;">
             <h2>Register</h2>
-            <form id="registerForm">
-                <input type="text" placeholder="Full Name" required>
-                <input type="email" placeholder="Email" required>
+            <form onsubmit="handleRegister(event)">
+                <input type="text" placeholder="Username" required>
                 <input type="password" placeholder="Password" required>
-                <input type="password" placeholder="Confirm Password" required>
                 <input type="text" placeholder="Invite Code" required>
                 <button type="submit">Register</button>
             </form>
@@ -40,65 +39,6 @@
         </div>
     </div>
 
-    <script>
-        function toggleForms() {
-            const loginForm = document.getElementById('login-form');
-            const registerForm = document.getElementById('register-form');
-            if (loginForm.style.display === 'none') {
-                loginForm.style.display = 'block';
-                registerForm.style.display = 'none';
-            } else {
-                loginForm.style.display = 'none';
-                registerForm.style.display = 'block';
-            }
-        }
-
-        document.addEventListener('mousemove', function(e) {
-            const crosshair = document.querySelector('.crosshair');
-            crosshair.style.left = e.pageX + 'px';
-            crosshair.style.top = e.pageY + 'px';
-        });
-
-        document.getElementById('registerForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const name = document.getElementById('registerName').value;
-            const email = document.getElementById('registerEmail').value;
-            const password = document.getElementById('registerPassword').value;
-            const confirmPassword = document.getElementById('confirmPassword').value;
-            const inviteCode = document.getElementById('inviteCode').value;
-            const errorElement = document.getElementById('registerError');
-
-            if (password !== confirmPassword) {
-                errorElement.textContent = "Passwords do not match";
-                return;
-            }
-
-            if (inviteCode !== "ASTOLFO2024") {
-                errorElement.textContent = "Invalid invite code";
-                return;
-            }
-
-            // If all validations pass, you would typically send this data to your server
-            console.log("Registration successful", { name, email, password, inviteCode });
-            alert("Registration successful! Welcome to Astolfo Bio!");
-            window.location.href = 'welcome.html';
-        });
-
-        document.getElementById('loginForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const email = document.getElementById('loginEmail').value;
-            const password = document.getElementById('loginPassword').value;
-            const errorElement = document.getElementById('loginError');
-
-            // This is a mock login. In a real application, you would verify these credentials with your server.
-            if (email === "user@example.com" && password === "password123") {
-                console.log("Login successful");
-                alert("Login successful! Welcome back to Astolfo Bio!");
-                window.location.href = 'welcome.html';
-            } else {
-                errorElement.textContent = "Invalid email or password";
-            }
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
